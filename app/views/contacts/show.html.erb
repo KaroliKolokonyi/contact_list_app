@@ -1,0 +1,19 @@
+<h1>Contact</h1>
+<div>
+   Full Name: <%= @contact.full_name %>
+</div>
+
+<div>
+   Phone Number: <%= @contact.phone_number %>
+</div>
+
+<div>
+  Updated date : <%= @contact.dateupdated %>
+</div>
+
+
+<a href = "<%= "/contacts/#{@contact.id}/edit" %>"> <input type = "submit" value = "Edit"> </a>
+
+<%= form_tag "/contacts/#{@contact.id}", method: :delete do %>
+  <input type = "submit" value = "delete">
+<% end %>
